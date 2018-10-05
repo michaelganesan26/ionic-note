@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Note } from '../interfaces/note';
 import { resolve } from 'url';
+import { Storage } from '@ionic/storage'
 
 @Injectable({
   providedIn: 'root'
@@ -60,11 +61,11 @@ export class NotesService {
 
 
   deleteNote(note): void {
-      let index = this.notes.indexOf(note);
+    let index = this.notes.indexOf(note);
 
-      if(index > -1){
-        this.notes.splice(index,1);
-        this.save();
-      }
+    if (index > -1) {
+      this.notes.splice(index, 1);
+      this.save();
+    }
   }
 }
