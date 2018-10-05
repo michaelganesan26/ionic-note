@@ -11,7 +11,7 @@
 </ion-header>
 <ion-content>
   <ion-list>
-    <ion-item button detail *ngFor="let note of notesService.notes" [href]="'/notes/' + note.id" routerDirection="forward">
+    <ion-item button detail *ngFor="let note of notesService.notes" [href]="generateUrl(note)" routerDirection="forward">
       <ion-label>{{note.title}}</ion-label>
     </ion-item>
   </ion-list>

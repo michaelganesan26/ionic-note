@@ -21,6 +21,14 @@ export class HomePage implements OnInit {
 
   }
 
+  generateUrl(note:Note):string{
+
+     let myUrl = "/notes/" + note.id;
+     console.log('Your current url is: ', myUrl);
+     return(myUrl);
+  }
+
+
   addNote(){
         this.alertCtrl.create({
            header: 'New Note',
